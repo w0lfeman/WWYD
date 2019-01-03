@@ -1,0 +1,8 @@
+<h1>Please enter you information to create a new account, below!</h1>
+
+<%= form_with model: @user do |f| %>
+<%= f.text_field :name, placeholder: 'Name' %>
+<%= f.text_field :handle, placeholder: 'Handle' %>
+<%= f.text_field :description, placeholder: 'Description' %>
+<%= f.submit %>
+<% end %>
