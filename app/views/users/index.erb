@@ -1,6 +1,8 @@
 <h1>Welcome to the WWYD To-Do List</h1>
-<h2>What Would You Do Application</h2>
+<h2>A social To-Do List</h2>
 
 <% @users.each do |user| %>
 <p><%= link_to user.name, user %></p>
 <% end %>
+
+<h3><%= link_to "Create a new user", new_user_path %></h3>

@@ -1,0 +1,6 @@
+<h2> Make a comment! </h2>
+
+<%= form_with model: @comment do |f|%>
+<%= f.text_field :comment, placeholder: 'Comment' %>
+<%= f.submit %>
+<% end %>

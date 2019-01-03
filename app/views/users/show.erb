@@ -3,4 +3,10 @@
 <p>Username: <%= @user.handle %></p>
 <p>Description: <%= @user.description %></p>
 
-<%= link_to "Return to WWYD", users_path %>
+<h4><%= link_to "Edit Description", edit_user_path %></h4>
+<h4><%= link_to "Home Page", users_path %></h4>
+
+<%= button_to "Delete User", @user, :method=>:delete %>
+
+
+

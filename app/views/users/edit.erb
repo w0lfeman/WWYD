@@ -1,0 +1,6 @@
+<h2>Make any desired changes to your personal description below!</h2>
+
+<%= form_with model: @user do |f| %>
+<%= f.text_field :description, placeholder: 'Description' %>
+<%= f.submit %>
+<% end %>
