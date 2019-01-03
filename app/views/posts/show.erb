@@ -1,0 +1,14 @@
+<p>Title: <%= @post.title %></p>
+<p>User: <% @user.each do |i| %>
+         <% if  i.id == @post.user_id %>
+        <%= i.name %>
+        <% end %>
+    <% end %>
+</p>
+<p>Item: <%= @post.item %></p>
+<p>Description: <%= @post.comment %></p>
+
+<p><%= button_to "Delete this post", @post, :method => :delete %></p>
+
+
+<%= link_to "Return to Posts", posts_path %>

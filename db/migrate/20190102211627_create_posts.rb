@@ -3,7 +3,8 @@ class CreatePosts < ActiveRecord::Migration[5.2]
     create_table :posts do |t|
       t.string :title
       t.string :item
-      t.text :comment
+      t.string :comment
+      t.belongs_to :user
 
       t.timestamps
     end
