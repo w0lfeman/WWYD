@@ -1,7 +1,7 @@
-<h2>Below are all comments and associated users!</h2>
+<h2>Below are all comments with there associated user!</h2>
 
 <% @comments.each do |user_comment| %>
-<p><%= link_to user_comment.commment, comment %></p>
+<p><%= link_to user_comment.comment, user_comment %></p>
 <% end %>
 
 

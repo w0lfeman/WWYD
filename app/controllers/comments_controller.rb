@@ -14,7 +14,7 @@ class CommentsController < ApplicationController
     
     def create
         comment = Comment.create(comment_params)
-        if comment.vaild?
+        if comment.valid?
             comment.save
             redirect_to comments_path
         else
@@ -24,7 +24,7 @@ class CommentsController < ApplicationController
     end
     
     def destroy
-    comment = Comment.find(parms[:id])
+    comment = Comment.find(params[:id])
     comment.destroy
     redirect_to comments_path
     end

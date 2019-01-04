@@ -12,7 +12,8 @@ Comment.destroy_all
 
 
 User.create!(name: "David", handle: "wolfeman", description: "He follows the rules till he breaks them, MUHHAWHAWHAWHAW!")
-User.create!(name: "Mike", handle: "dropTheMike", description: "Everybody, everbody, everybody wanna be like Mike!") 
+User.create!(name: "Mike", handle: "dropTheMike", description: "Everybody, everbody, everybody wanna be like Mike!")
+ 
 Post.create!(title: "Grocery", user_id: User.first.id, item: "Get milk", comment: "You should really think about getting milk you SOB.")
 Post.create!(title: "Gym", user_id: User.second.id, item: "Pay dues", comment: "You'll stay healthy of you pay the dues so you can workout.")
 

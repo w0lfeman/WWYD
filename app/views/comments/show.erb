@@ -1,5 +1,6 @@
 <%= link_to "Back to user comments", comments_path %>
 
+<h2><%= @comment.comment %></h2>
 
+<%= button_to "Delete comment", @comment, :method=>:delete %>
 
-<%= button_to "Delete comment", @comment, :method=>delete %>
