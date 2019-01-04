@@ -1,4 +1,4 @@
-<p>Title: <%= @post.title %></p>
+<h1><p>Title: <%= @post.title %></p></h1>
 <p>User: <% @user.each do |i| %>
          <% if  i.id == @post.user_id %>
         <%= i.name %>
@@ -6,7 +6,7 @@
     <% end %>
 </p>
 <p>Item: <%= @post.item %></p>
-<p>Description: <%= @post.comment %></p>
+<p>Comment: <%= @post.comment %></p>
 
 <p><%= button_to "Delete this post", @post, :method => :delete %></p>
 
