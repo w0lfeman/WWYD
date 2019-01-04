@@ -1,8 +1,8 @@
-<h1><div>Welcome to the WWYD To-Do List</div></h1>
-<h2><div>A social To-Do List</h2></div></p>
+<h1>Welcome to the WWYD To-Do List</h1>
+<h2>A social To-Do List</h2>
 
 <% @users.each do |user| %>
-<div><%= link_to user.name, user %></div>
+<p><%= link_to user.name, user %></p>
 <% end %>
 
 <h3><%= link_to "Create a new user", new_user_path %></h3>

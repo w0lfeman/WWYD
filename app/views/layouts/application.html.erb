@@ -11,9 +11,13 @@
 
   <body>
 
-  <br> <div><%= link_to "Home Page", users_path %>
+  <br> <div><%= link_to "Home", users_path %> &nbsp;&nbsp;&nbsp;
 
-  <%= link_to "Create New Post", new_post_path %></div> </br>
+  <%= link_to "Lists", posts_path %> &nbsp;&nbsp;&nbsp;
+
+  <%= link_to "Create New List", new_post_path %> &nbsp;&nbsp;&nbsp;
+
+  <%= link_to "Create Comment", new_comment_path %></div> </br>
 
 
     <%= yield %>

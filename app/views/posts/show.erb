@@ -1,4 +1,7 @@
-<h1><p>Title: <%= @post.title %></p></h1>
+<div><font size = "6">Title: <%= @post.title %></font>
+<%= button_to "Delete this post", @post, :method => :delete %></div>
+
+
 <p>User: <% @user.each do |i| %>
          <% if  i.id == @post.user_id %>
         <%= i.name %>
@@ -6,9 +9,18 @@
     <% end %>
 </p>
 <p>Item: <%= @post.item %></p>
-<p>Comment: <%= @post.comment %></p>
+<p>Description: <%= @post.comment %></p>
 
-<p><%= button_to "Delete this post", @post, :method => :delete %></p>
+<p> <% @comment.each do |c| %>
+         <% if  c.user_id == @post.user_id %>
+        <%= c.comment%>
+<br/>   
+      
+        <% end %>
+        
+    <% end %>
+</p>
+
 
 
 <%= link_to "Return to Posts", posts_path %>

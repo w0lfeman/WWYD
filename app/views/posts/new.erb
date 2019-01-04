@@ -1,8 +1,8 @@
-<h1>Create a new post, below!</h1>
+<h1>Create a new list, below!</h1>
 
 <%= form_with model: @post do |f| %>
 <%= f.text_field :title, placeholder: 'Title' %>
-<%= f.number_field :user_id, min: 47 , placeholder: 'User' %>
+<%= f.collection_select :user_id, User.all, :id, :name, prompt: true %>
 <%= f.text_field :item, placeholder: 'Item' %>
 <%= f.text_field :comment, placeholder: 'Comment' %>
 <%= f.submit %>

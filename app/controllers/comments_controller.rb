@@ -13,7 +13,7 @@ class CommentsController < ApplicationController
     end
     
     def create
-        comment = Comment.create(comment_params)
+        comment = Comment.create!(comment_params)
         if comment.valid?
             comment.save
             redirect_to comments_path
@@ -32,7 +32,7 @@ class CommentsController < ApplicationController
     private
     
     def comment_params
-    params.require(:comment).permit(:comment)
+    params.require(:comment).permit(:comment, :user_id, :post_id)
     end
 
 end
